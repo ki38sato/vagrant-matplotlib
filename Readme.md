@@ -5,8 +5,12 @@
 
 - pyenv
 - virtualenv
-- python-lambda-local
-- lambda-uploader
+- requests
+- numpy
+- pandas
+- statsmodels
+- matplotlib
+- scipy
 
 ## Usage
 
