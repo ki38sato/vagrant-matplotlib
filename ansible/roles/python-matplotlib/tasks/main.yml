@@ -1,0 +1,28 @@
+---
+- name: yum groupinstall Development tools
+  yum: name="@Development tools"
+
+- name: yum install depenencies
+  yum: name={{ item }}
+  with_items:
+    - gcc
+    - gcc-c++
+    - make
+    - git
+    - patch
+    - openssl-devel
+    - zlib-devel
+    - readline-devel
+    - sqlite-devel
+    - bzip2-devel
+    - blas-devel
+    - lapack-devel
+    - jq
+    - libxslt-devel
+    - libxml2-devel
+    - freetype-demos
+    - freetype-devel
+    - libpng-devel
+
+- include: pyenv.yml
+  remote_user: root
